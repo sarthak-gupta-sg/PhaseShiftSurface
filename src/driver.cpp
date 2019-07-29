@@ -18,43 +18,11 @@
 using namespace std;
 //using namespace cv;
 
-int main()
+int main(int argc, char **argv)
 {
     system("clear");
     cout << "\t\t\tPhase wrapping and unwrapping program" << endl << endl;
-        
-    
-    //Load Drivers for Serial Communication
-    system("sudo modprobe pl2303");
-    std::this_thread::sleep_for(std::chrono::milliseconds(2000)); //9 seconds required by controller to rotate motor by 45 degrees
-    
-    //Motor Controller in AUTO MODE
-    SerialDrive("aLIFF;");
-	std::this_thread::sleep_for(std::chrono::milliseconds(2000));
-    
-    //Grab 5 images
-    cout << "*** Begin Image Grab ***" << endl;
-    for(auto i = 0; i < 5; ++i)
-    {   
-		if(grabimage(i + 1) != 0)
-		{
-			cout << "Grab Failed" << endl;
-			return -1;
-		}
-		
-		if(i == 4)
-		{
-			//Final state reached no more rotation needed
-			break;
-		}
-
-		//Rotate by 45 degrees
-		SerialDrive("aMO00068F81;");
-        std::this_thread::sleep_for(std::chrono::milliseconds(9000)); //9 seconds required by controller to rotate motor by 45 degrees
-    }
-    cout << "*** End Image Grab ***" << endl << endl << endl << endl;
-    
-    
+            
     //Resize 5 images
     cout << "*** Begin Image Resize ***" << endl;
     if(resize() != 0)
