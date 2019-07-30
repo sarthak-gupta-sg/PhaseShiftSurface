@@ -1,14 +1,7 @@
-/*
-#include <string>
-#include <vector>
-#include <opencv2/core.hpp>
-#include <opencv2/imgcodecs.hpp>
-*/
+//Driver program that calls out other modules
 #include <iostream>
 #include <chrono>
 #include <thread>
-#include "serial.h"
-#include "grabimage.h"
 #include "resize.h"
 #include "checksize.h"
 #include "wrap.h"
@@ -16,13 +9,15 @@
 #include "zernike.h"
 
 using namespace std;
-//using namespace cv;
 
 int main(int argc, char **argv)
 {
     system("clear");
     cout << "\t\t\tPhase wrapping and unwrapping program" << endl << endl;
             
+    //Get the path from the program arguments
+    std::string path(argv[1]);
+    
     //Resize 5 images
     cout << "*** Begin Image Resize ***" << endl;
     if(resize() != 0)
