@@ -27,8 +27,7 @@ X, Y = np.meshgrid(X, Y)
 Z = np.genfromtxt(sys.argv[1], delimiter=',')[:,:-1]
 
 # Plot the surface.
-#surf = ax.plot_surface(X, Y, Z, cmap = cm.coolwarm, linewidth = 2, antialiased = True)
-surf = ax.plot_surface(X, Y, Z, linewidth = 2, antialiased = True)
+surf = ax.plot_surface(X, Y, Z, cmap = cm.coolwarm, linewidth = 2, antialiased = True)
 ax.axis('equal')
 
 # Customize the z axis.
@@ -37,6 +36,6 @@ ax.zaxis.set_major_locator(LinearLocator(10))
 ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
 
 # Add a color bar which maps values to colors.
-# fig.colorbar(surf, shrink=0.5, aspect=5)
+fig.colorbar(surf, shrink=0.5, aspect=5)
 
 plt.show()
