@@ -1,5 +1,6 @@
 //Driver program that calls out other modules
 #include <iostream>
+#include <experimental/filesystem>
 #include <chrono>
 #include <thread>
 #include "resize.h"
@@ -15,8 +16,25 @@ int main(int argc, char **argv)
     system("clear");
     cout << "\t\t\tPhase wrapping and unwrapping program" << endl << endl;
             
-    //Get the path from the program arguments
+    //Get the path of directory containing input images from the program arguments
+    //Expected that the directory will contain files named {1,2,3,4,5}.bmp
     std::string path(argv[1]);
+    //std::experimental::filesystem from_path = path;
+    
+    //Copy files to working directory
+    std::cout << path << std::endl;
+    try
+    {
+		//std::experimental::filesystem::copy(path, "Images/", std::experimental::filesystem::copy_options::overwrite_existing);
+		std::experimental::filesystem::remove_all("Images/");
+		std::experimental::filesystem::create_directories("Images/");
+		std::experimental::filesystem::copy(path, "Images/");
+	}
+	catch(std::exception& e)
+	{
+		std::cout << e.what() << std::endl;
+		return -1;
+	}
     
     //Resize 5 images
     cout << "*** Begin Image Resize ***" << endl;

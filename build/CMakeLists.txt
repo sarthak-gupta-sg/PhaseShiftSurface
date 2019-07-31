@@ -5,6 +5,7 @@ if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
   set(CMAKE_INSTALL_PREFIX "/home/sarthak/Documents/SarGit/FizeauOpenCV" CACHE PATH "..." FORCE)
 endif()
 
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_FLAGS "-D_GNULINUX")
 
 find_package( PkgConfig REQUIRED )
@@ -25,6 +26,6 @@ file(GLOB SOURCES "../src/*.cpp")
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 add_executable( driver.out ${SOURCES} )
 
-target_link_libraries( driver.out ${OpenCV_LIBS} )
+target_link_libraries( driver.out ${OpenCV_LIBS} stdc++fs )
 install( TARGETS driver.out DESTINATION bin )
 install( DIRECTORY ../scripts DESTINATION bin )
