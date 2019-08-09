@@ -28,4 +28,5 @@ add_executable( driver.out ${SOURCES} )
 
 target_link_libraries( driver.out ${OpenCV_LIBS} stdc++fs )
 install( TARGETS driver.out DESTINATION bin )
-install( DIRECTORY ../scripts DESTINATION bin )
+install( DIRECTORY ../utils/scripts DESTINATION bin ) 
+install( DIRECTORY ../utils/zernike-coeff DESTINATION bin ) 
