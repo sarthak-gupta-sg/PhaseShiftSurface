@@ -14,11 +14,14 @@ This software computes wavefront from of Fizeau interferograms and then performs
 ## Compile
 1. Create a directory named bin
 2. Go to directory build and issue following commands: 
-	a. cmake .
-	b. make && make install
+```
+cmake .
+make && make install
+```
 
 ## Usage
 1. Change to bin directory
 2. Issue following command: 
+```
 ./driver.out <path/to/folder/containing/phase/shifted/images>
-
+```
