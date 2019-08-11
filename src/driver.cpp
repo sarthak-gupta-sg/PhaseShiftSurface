@@ -88,7 +88,7 @@ int main(int argc, char **argv)
 	
 	//Generate Profile
 	cout << "*** Begin Profile Plotting ***" << endl;
-	system("python3 scripts/plot3d.py");
+	system("python3 scripts/zPlot.py Data/unwrappedData.csv");
 	cout << "*** End Plotting ***" << endl << endl;
 	
 	
@@ -103,7 +103,7 @@ int main(int argc, char **argv)
 	
 	//Generate Profile
 	cout << "*** Begin Profile Plotting ***" << endl;
-	system("python3 scripts/zernike_plot.py Data/zmap.csv");
+	system("python3 scripts/zPlot.py Data/zmap.csv");
 	cout << "*** End Plotting ***" << endl << endl;
 	
 	cout << "*** PROGRAM COMPLETES SUCCESSFULLY ***" << endl << endl;

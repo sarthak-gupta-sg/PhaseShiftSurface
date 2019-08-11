@@ -17,7 +17,8 @@ from matplotlib.ticker import LinearLocator, FormatStrFormatter
 import numpy as np
 import sys
 
-fig = plt.figure(figsize=(20,10))
+#fig = plt.figure(figsize=(20,10))
+fig = plt.figure()
 ax = fig.gca(projection='3d')
 
 # Make data.
@@ -32,8 +33,8 @@ ax.axis('equal')
 
 # Customize the z axis.
 # ax.set_zlim(-2.0, 2.0)
-ax.zaxis.set_major_locator(LinearLocator(10))
-ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
+# ax.zaxis.set_major_locator(LinearLocator(10))
+# ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
 
 # Add a color bar which maps values to colors.
 fig.colorbar(surf, shrink=0.5, aspect=5)
