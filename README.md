@@ -1,5 +1,6 @@
 # FizeauOpenCV
 
+This software project was done as part of collaboration for our Laser Optics Group at our center. The objective is to design a fully functional Fizeau Interferometer. 
 This software computes wavefront from of Fizeau interferograms and then performs analysis using Zernike Kernels. Follwing functions are implemented:
 1. Phase computation (src/wrap.cpp)
 2. Phase unwrapping (src/unwrap.cpp) - Based on Histogram Phase Unwrapping from OpenCV Contrib
