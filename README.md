@@ -9,7 +9,7 @@ This project is a collaborative software for Laser Optics Group at our center. T
 5. Wavefront Analysis (src/zernike.cpp)
 6. Driver for all modules above (src/driver.cpp)
 
-## Requirements
+## Requirements for compilation
 1. This module has been compiled and tested on Ubuntu 18.04 LTS amd64. Other Linux OS have not been tested, but they should work. 
 2. OpenCV, main and contrib.
 3. Python3, Matplotlib, Numpy - for 3D plotting purpose.
