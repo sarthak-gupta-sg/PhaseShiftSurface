@@ -1,10 +1,13 @@
 # FizeauOpenCV
 
-This software project was done as part of collaboration for our Laser Optics Group at our center. The objective is to design a fully functional Fizeau Interferometer. 
-This software computes wavefront from of Fizeau interferograms and then performs analysis using Zernike Kernels. Follwing functions are implemented:
-1. Phase computation (src/wrap.cpp)
-2. Phase unwrapping (src/unwrap.cpp) - Based on Histogram Phase Unwrapping from OpenCV Contrib
-3. Wavefront Analysis (src/zernike.cpp)
+This software project was done as part of collaboration for our Laser Optics Group at our center. The objective is to design a fully functional Fizeau Interferometer. The complete software includes grabbing a sequence of 5 images from a camera (choice of Baumer, Basler, PCO, TIS), stepper motor control for the interferometer. This subset of software computes wavefront from of Fizeau interferograms and then performs analysis using Zernike Kernels. Follwing functions are implemented:
+
+1. Resizing Images (src/resize.cpp) - converting images to 512x512 pixels to fit the Zernike Kernels size.
+2. Check Size (src/checksize.cpp) - Performs input sanitization and checks.
+3. Phase computation (src/wrap.cpp)
+4. Phase unwrapping (src/unwrap.cpp) - Based on Histogram Phase Unwrapping from OpenCV Contrib
+5. Wavefront Analysis (src/zernike.cpp)
+6. Driver for all modules above (src/driver.cpp)
 
 ## Requirements
 1. This module has been compiled and tested on Ubuntu 18.04 LTS. Other Linux OS have not been tested, but they should work. 
@@ -37,3 +40,4 @@ make && make install
 ```
 ./driver.out <path/to/folder/containing/phase/shifted/images>
 ```
+3. There is an assumption that there would be total of 5 images named as {1,2,3,4,5}.bmp in the folder. This is because the full software grabs a sequence of 5 images automatically and forwards them for computation.
