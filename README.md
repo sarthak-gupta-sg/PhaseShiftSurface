@@ -10,7 +10,7 @@ This project is a collaborative software for Laser Optics Group at our center. T
 6. Driver for all modules above (src/driver.cpp)
 
 ## Requirements for compilation
-1. This module has been compiled and tested on Ubuntu 18.04 LTS amd64. Other Linux OS have not been tested, but they should work. 
+1. This module has been compiled and tested on Ubuntu 18.04 LTS amd64. Work is undergoing to port software to ARM based SBCs. 
 2. OpenCV, main and contrib.
 3. Python3, Matplotlib, Numpy - for 3D plotting purpose.
 4. All packages available in Ubuntu repositories have been used so as to keep the deployment simple. Install them by:
