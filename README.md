@@ -1,6 +1,6 @@
 # FizeauOpenCV
 
-This software project was done for Laser Optics Group at our center. The objective is to design a fully functional low cost Fizeau Interferometer. The complete software includes grabbing a sequence of 5 images from a camera (choice of Baumer, Basler, PCO, TIS), stepper motor control for the interferometer. The subset of software (in this repository) computes wavefront from a set of 5 Fizeau interferograms and then performs wavefront analysis using Zernike Kernels. Follwing functions are implemented:
+This software project was done for Laser Optics Group at our center. The objective is to design a fully functional low cost Fizeau Interferometer. The complete software performs acquisition of a sequence of 5 images from a camera (choice of Baumer, Basler, PCO, TIS), stepper motor control for the interferometer. The subset of software (in this repository) computes wavefront from a set of 5 Fizeau interferograms and then performs wavefront analysis using Zernike Kernels. Follwing functions are implemented:
 
 1. Resizing Images (src/resize.cpp) - converting images to 512x512 pixels to fit the Zernike Kernels size.
 2. Check Size (src/checksize.cpp) - Performs input sanitization and checks.
