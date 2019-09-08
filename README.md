@@ -41,4 +41,4 @@ make && make install
 ```
 ./driver.out <path/to/folder/containing/phase/shifted/images>
 ```
-3. There is an assumption that there would be total of 5 images named as {1,2,3,4,5}.bmp in the folder. This is because the full software grabs a sequence of 5 images automatically and forwards them for computation.
+3. There is an assumption that there would be total of 5 images named as {1,2,3,4,5}.bmp in the folder name supplied on command line. This is because the version of software currently deployed, acquires a sequence of 5 images automatically, saves them as {1,2,3,4,5}.bmp and forwards them for computation.
