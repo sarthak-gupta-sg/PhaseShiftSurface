@@ -25,7 +25,6 @@ This will pull all required dependencies.
 2. The include directory contains header declarations.
 3. The utils/scripts directory contains Python3 scripts to create 3D surface maps.
 4. The src directory contains the C++ source code.
-5. The utils/zernike-coeff directory contains 16 pre computed Zernike Kernels, each of size 512x512. 
 
 ## Compile
 1. Create a directory named bin
