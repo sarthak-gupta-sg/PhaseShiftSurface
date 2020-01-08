@@ -10,8 +10,8 @@
 //Custom Headers
 //#include "include/spline.h"
 //#include "include/Util.h"
-#include "include/fizeau.h"
-#include "include/zernike.h"
+#include "fizeau.h"
+#include "zernike.h"
 
 using namespace cv;
 using namespace std;

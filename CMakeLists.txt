@@ -12,7 +12,7 @@ find_package( PkgConfig REQUIRED )
 find_package( OpenCV REQUIRED )
 
 #Bring the headers, such as wrap.h and unwrap.h into the project
-include_directories(../include)
+include_directories(include)
  
 #Can manually add the sources using the set command as follows:
 #set(SOURCES src/driver.cpp src/wrap.cpp src/unwrap.cpp)
@@ -20,7 +20,7 @@ include_directories(../include)
 # or 
 
 #The file(GLOB...) allows for wildcard additions:
-file(GLOB SOURCES "../src/*.cpp")
+file(GLOB SOURCES "src/*.cpp")
 
 
 include_directories( ${OpenCV_INCLUDE_DIRS} )
@@ -31,4 +31,4 @@ install( DIRECTORY DESTINATION bin )
 install( DIRECTORY DESTINATION bin/Data )  
 install( DIRECTORY DESTINATION bin/Images )  
 install( TARGETS fizeau DESTINATION bin )
-install( DIRECTORY ../scripts DESTINATION bin ) 
+install( DIRECTORY scripts DESTINATION bin ) 
