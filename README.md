@@ -1,4 +1,4 @@
-# FizeauOpenCV
+# PhaseShiftSurface
 
 This project is a collaborative software for Laser Optics Group at our center. The objective is to design a fully functional low cost Fizeau Interferometer. The complete software performs acquisition of a sequence of 5 images from a camera (choice of Baumer, Basler, PCO, TIS), stepper motor control for the interferometer, computation of wavefront follwed by wavefront analysis. The subset of software (in this repository) computes wavefront from a set of 5 Fizeau interferograms and then performs wavefront analysis using Zernike Kernels.
 
