@@ -145,6 +145,7 @@ int driver()
         return -1;
     }
     cout << "*** Zernike Processing Completed ***" << endl;
+    //======================================================================
 
     //Generate Profile
     system("python3 scripts/Plots.py 1");
@@ -174,9 +175,10 @@ int main(int argc, char ** argv)
     std::experimental::filesystem::create_directories("Images");
     std::experimental::filesystem::copy( argv[1], "Images/");
     
+    //main class driver
     driver();
     
-    //save
+    //save results
     save();
 
 

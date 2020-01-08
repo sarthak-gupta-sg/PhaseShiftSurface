@@ -11,6 +11,10 @@ set(CMAKE_CXX_FLAGS "-D_GNULINUX")
 find_package( PkgConfig REQUIRED )
 find_package( OpenCV REQUIRED )
 
+################
+#All the paths are relative to the CMakeList.txt location and NOT the build directory
+################
+
 #Bring the headers, such as wrap.h and unwrap.h into the project
 include_directories(include)
  
