@@ -22,7 +22,7 @@ This will pull in all required dependencies.
 1. Create a directory named 'build' in current directory
 2. Change to 'build' and issue following commands: 
 ```
-cmake ..
+cmake .. -DCMAKE_INSTALL_PREFIX=</path/where/you/have/write/permissions>
 make && make install
 ```
 
@@ -30,7 +30,7 @@ make && make install
 ### IMPORTANT
 There is an assumption that there would be total of 5 images named as {1,2,3,4,5}.bmp in the folder name supplied on command line. This is because the full version of software currently deployed, acquires a sequence of 5 images automatically, saves them as {1,2,3,4,5}.bmp and forwards them for computation.
 
-1. Change to bin directory
+1. Change to 'PhaseShiftSurface' directory in the path you have specified during compilation
 2. Issue following command: 
 ```
 ./fizeau <path/to/folder/containing/phase/shifted/images>
