@@ -8,8 +8,8 @@
 #include <opencv2/phase_unwrapping.hpp>
 
 //Custom Headers
-#include "include/spline.h"
-#include "include/Util.h"
+//#include "include/spline.h"
+//#include "include/Util.h"
 #include "include/fizeau.h"
 #include "include/zernike.h"
 
@@ -118,6 +118,7 @@ int Fizeau::checksize()
     return 0;
 }
 
+/*
 using vec = vector<double>;
 
 int Fizeau::normaliseRow(vector<float> signal, vector<int> & intensity, int flag = 1)
@@ -200,12 +201,12 @@ int Fizeau::normalise()
                 norm[i] =  150.0 * ( signal[i] - intmin[i] ) / (intmax[i] - intmin[i] ) ;
                 //cout << norm[i] << " " ;
 
-                /*
-                if(norm[i] > 255.0)
-                    output.at<uchar>(m, i) = 255;
-                else
-                    output.at<uchar>(m, i) = (uchar)norm[i];
-                */
+                //
+                //if(norm[i] > 255.0)
+                //    output.at<uchar>(m, i) = 255;
+                //else
+                //    output.at<uchar>(m, i) = (uchar)norm[i];
+                //
                 output.at<uchar>(m, i) = (uchar)norm[i];
                 //cout << (int)output.at<uchar>(m, i) << endl;
             }
@@ -216,7 +217,7 @@ int Fizeau::normalise()
     }
     return 0;
 }
-
+*/
 int Fizeau::wrap()
 {
 
