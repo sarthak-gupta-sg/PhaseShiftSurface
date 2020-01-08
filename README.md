@@ -27,10 +27,10 @@ This will pull all required dependencies.
 4. The src directory contains the C++ source code.
 
 ## Compile
-1. Create a directory named bin
-2. Go to directory build and issue following commands: 
+1. Create a directory named 'bin'
+2. Go to directory named 'build' and issue following commands: 
 ```
-cmake .
+cmake ..
 make && make install
 ```
 
@@ -38,6 +38,6 @@ make && make install
 1. Change to bin directory
 2. Issue following command: 
 ```
-./driver.out <path/to/folder/containing/phase/shifted/images>
+./fizeau <path/to/folder/containing/phase/shifted/images>
 ```
 3. There is an assumption that there would be total of 5 images named as {1,2,3,4,5}.bmp in the folder name supplied on command line. This is because the version of software currently deployed, acquires a sequence of 5 images automatically, saves them as {1,2,3,4,5}.bmp and forwards them for computation.
