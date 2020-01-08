@@ -24,12 +24,11 @@ file(GLOB SOURCES "../src/*.cpp")
 
 
 include_directories( ${OpenCV_INCLUDE_DIRS} )
-add_executable( driver.out ${SOURCES} )
+add_executable( fizeau ${SOURCES} )
 
-target_link_libraries( driver.out ${OpenCV_LIBS} stdc++fs )
+target_link_libraries( fizeau ${OpenCV_LIBS} stdc++fs )
 install( DIRECTORY DESTINATION bin )  
 install( DIRECTORY DESTINATION bin/Data )  
 install( DIRECTORY DESTINATION bin/Images )  
 install( TARGETS driver.out DESTINATION bin )
-install( DIRECTORY ../utils/scripts DESTINATION bin ) 
-install( DIRECTORY ../utils/zernike-coeff DESTINATION bin ) 
+install( DIRECTORY ../scripts DESTINATION bin ) 
