@@ -7,6 +7,7 @@ class Fizeau
 {
 private:
     cv::Mat phaseMat = cv::Mat(512, 512, CV_32FC1);
+    cv::Mat mask = cv::Mat(512, 512, CV_32FC1);
 
 public:
     float piston;
